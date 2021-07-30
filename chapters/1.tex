@@ -1,0 +1,137 @@
+\chapter{Basics}
+\section*{Input/Output}
+\subsection*{Output}
+In Python 3, unlike C and C++, there is no need to use any I/O Library.
+To create a simple ``Hello, World!'' output, we only need to write one line.
+To do that, we need to create a Python file. We will name it \emph{hello.py}.
+\emph{``hello''} is the file name, while \emph{``.py''} is the file extension.
+\begin{lstlisting}
+# hello.py
+print('Hello, World!')
+\end{lstlisting}
+Let's look at the code we wrote.
+At line one, we wrote ``print(\emph{\hyperref[subsec:strings]{string}})'', where \emph{string} is ``Hello, World!''.
+The \emph{print()} function can take all kinds of variables, not just strings.
+Notice that to create a comment, we use '\#' characters.
+If we run the code with the command \emph{python3 hello.py}, the program will print:
+\begin{lstlisting}[language=Text]
+Hello, World!
+\end{lstlisting}
+We can also use \emph{Escape Sequences} in strings. For example:
+\begin{lstlisting}
+# hello.py
+print("Hello,\nWorld")
+\end{lstlisting}
+outputs:
+\begin{lstlisting}[language=Text]
+Hello,
+World!
+\end{lstlisting}
+Notice that we can use the \emph{'} or \emph{"} symbols for strings.
+\subsection*{Input}
+To get a user's keyboard input, we can use a function called \emph{input()}.
+This function lets the user enter a string with a keyboard, waits for a \emph{newline} character \\
+(also known as \emph{\textbackslash n} or \emph{ENTER}) and returns the string.
+For example:
+\begin{lstlisting}
+# input.py
+print(input("Name:"))
+\end{lstlisting}
+Take a look at the code above. In the code, we wrote ``input(\emph{string})'' where \emph{string} is ``Name:''.
+The argument (\emph{string}) is the prompt; what the user will see before he is allowed to use his keyboard.
+Let's run the code again:
+\begin{lstlisting}[language=Text]
+Name:
+\end{lstlisting}
+Notice that we can now use the keyboard to type something.
+And after we press enter, the program will print what the user just typed.
+\begin{lstlisting}[language=Text]
+Name:Test
+Test
+\end{lstlisting}
+When we look at the example above, we will see that the user typed ``Test''.
+The program then printed ``Test''.
+Notice that the \emph{input()} function DOES return the newline too.
+\section*{Variables}
+\subsection*{The \emph{type()} Function}
+The \emph{type()} returns the type of the object passed to it.
+For example, we can use the \emph{type()} function to print the type of a \hyperref[subsec:strings]{string}:
+\begin{lstlisting}
+x = "Hello"
+print(type(x))
+\end{lstlisting}
+and it will return:
+\begin{lstlisting}[language=Text]
+<class 'str'>
+\end{lstlisting}
+or we can check the type of an \hyperref[subsec:integers]{integer} using the following code:
+\begin{lstlisting}
+x = 127
+print(type(x))
+\end{lstlisting}
+\subsection*{Strings}
+\label{subsec:strings}
+The \emph{string} type allows us to store multiple characters.
+There are two ways to create multiple-line strings. The first one is to use \emph{newlines}.
+We can do that by adding a '\textbackslash{n}' character to the string.
+Example:
+\begin{lstlisting}
+print("This is the first line.\nAnd this is the second.")
+\end{lstlisting}
+or, we can use three double-quotes to create a multiple-line string.
+\begin{lstlisting}
+print("""This is the first line.
+And this is the second.""")
+\end{lstlisting}
+or:
+\begin{lstlisting}
+print('''This is the first line.
+And this is the second.''')
+\end{lstlisting}
+\subsection*{Integers \& Floats}
+\subsubsection*{Integers}
+The integer type allows storage of integers.
+For example, we can initialize an integer variable like the following snippet:
+\begin{lstlisting}
+x = 739
+\end{lstlisting}
+Let's look at the line above: We wrote ``x = 739''. \emph{x} is the name of the variable, and 739 is the value of it.
+We can also check the type of \emph{x} using the \emph{type()} function in the following code:
+\begin{lstlisting}
+print(type(x))
+\end{lstlisting}
+which will print:
+\begin{lstlisting}[language=Text]
+<class 'int'>
+\end{lstlisting}
+\subsubsection*{Floats}
+The float type stores decimal numbers, and can be initialized like the following:
+\begin{lstlisting}
+x = 547.23
+\end{lstlisting}
+and its type will be:
+\begin{lstlisting}[language=Text]
+<class 'float>
+\end{lstlisting}
+\section*{Lists/Arrays}
+Lists (aka arrays) can store multiple values including strings, integers (and floats) and even other lists!
+
+We can initialize a simple list with the following snippet:
+\begin{lstlisting}
+integerArray = [1, 4, 72, 7]
+\end{lstlisting}
+and we can access one of the values in the list using square brackets.
+Example:
+\begin{lstlisting}
+print(integerArray[0])
+\end{lstlisting}
+will output:
+\begin{lstlisting}[language=Text]
+1
+\end{lstlisting}
+notice that when accessing a value in a list, 1 is 0, 2 is 1 and so forth.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../ThePythonTutorial"
+%%% End:

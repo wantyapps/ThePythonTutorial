@@ -129,7 +129,27 @@ will output:
 \begin{lstlisting}[language=Text]
 1
 \end{lstlisting}
-notice that when accessing a value in a list, 1 is 0, 2 is 1 and so forth.
+notice that when accessing a value in a list, the number \emph{1} points to the first value in the list,
+\emph{2} points to the second value, and so forth.
+
+
+We can also create a list with multiple types of values like the following:
+\begin{lstlisting}
+listing = [16, "hello", 712.48]
+\end{lstlisting}
+and access it with:
+\begin{lstlisting}
+print(listing[1])
+\end{lstlisting}
+or print it all with:
+\begin{lstlisting}
+print(listing)
+\end{lstlisting}
+which will output the following text:
+\begin{lstlisting}[language=Text]
+[16, "hello", 712.48]
+\end{lstlisting}
+
 
 %%% Local Variables:
 %%% mode: latex
